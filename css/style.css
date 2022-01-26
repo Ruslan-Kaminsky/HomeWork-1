@@ -1,0 +1,346 @@
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Page ============================== */
+.page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #243232 ;
+}
+
+/* Header ============================== */
+.header {  
+    padding: 1rem 0;
+    margin-bottom: 110px;
+    background: #3d504c;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    display: block;
+    width: 24px;
+}
+
+.header-brand {
+    font-size: 1.6rem;
+    color: #FFC000;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.header-nav {
+    display: flex;
+}
+
+/* Navigation Links ============================== */
+.header-nav-link {
+    margin-left: 1.5rem;
+
+    color: #FFBF00;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    
+    transition: color .2s linear;
+}
+
+/* При наводе на ссилку */
+.header-nav-link:hover {
+    color: #c28e00;
+}
+
+.header-nav-link.active {
+    position: relative;
+}
+
+.header-nav-link.active::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+
+    background-color: #E6A000;
+
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+}
+
+/* Content ============================== */
+.content {
+    height: 100%;
+    width: 100%;
+    max-width: 565px;
+}
+.content-header {
+    margin-bottom: 35px;
+}
+
+.subtitle { /* My name is */
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, .6);
+}
+
+.title { /* Ruslan Kaminsky and i'm Web Developer */
+    font-size: 32px;
+    color: #cdcdcd;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.title span {
+    color: #e1a901;
+}
+
+.text {
+    font-size: 1rem;
+    color: #cdcdcd;
+    margin-bottom: 50px;
+}
+
+/* btn ============================== */
+.btn {
+    line-height: 1.1 ;
+    display: inline-block;
+    font-size: 1rem;
+    color: #243232;
+    font-weight: 500;
+    background-color: #FFBF00;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 12px 35px;
+
+    border: 0;
+    cursor: pointer;
+    transition: background .2s linear;
+}
+
+.btn:hover {
+    background-color: #c28e00;
+}
+
+.btn-full {
+    display: block;
+    width: 100%;
+}
+
+/* author (картинка) ============================== */
+.author {
+    position: absolute;
+    bottom: 0;
+    width: 500px;
+    right: 200px;
+    bottom: 230px;
+}
+
+/* Footer ============================== */
+
+.footer {
+    position: absolute;
+    bottom: 45px;
+    left: 0;
+    width: 100%;
+}
+
+/* Contacts ============================== */
+.contacts {
+    display: flex;
+    align-items: center;
+}
+
+.contacts-link {
+    margin-right: 2rem;
+    font-size: 1rem;
+    color: #EBEBEB;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contacts-link:last-child {
+    margin-right: 0;
+}
+
+.contacts-link:hover {
+    text-decoration: underline;
+}
+
+.contacts-icon {
+    margin-right: 5px;
+}
+
+/* Form ============================== */
+.form {
+    width: 100%;
+    max-width: 280px;
+}
+
+.input, .textarea {
+    display: block;
+    width: 100%;
+    font-family: 'Montserrat';
+    font-size: 1rem;
+
+    background-color: #3D504C;
+    border: 0;
+    padding: 12px 18px;
+    color: white;
+    border-radius: 5px;
+}
+
+.input::placeholder, .textarea::placeholder {
+    color: white;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.textarea {
+    height: 100px;
+    resize: none;
+}
+
+/* Media ============================== */
+
+@media (max-width: 1000px) {
+
+    .author {
+        display: none;
+    }
+
+}
+
+@media (max-width: 813px) {
+    
+    /* Page */
+    .page {
+        height: auto;
+        min-height: 100vh; /* Минимальная высота блока */
+        padding-bottom: 2rem;
+    }
+
+    /* Header */
+    .header-logo {
+        display: none;
+    }
+    
+    .header {
+        margin-bottom: 50px;
+    }
+
+    .header-brand {
+        font-size: 1.2rem;
+    }
+
+    /* Content */
+    .content {
+        max-width: none;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    /* Form */
+    .form {
+        margin: 0 auto;
+    }
+
+    /* Footer */
+    .footer {
+        position: static;
+    }
+
+    .contacts {
+        flex-direction: column;
+    }
+
+    .contacts-link {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .contacts-link:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 565px) {
+
+    .page {
+        height: auto;
+        min-height: 100vh; /* Минимальная высота блока */
+    }
+
+    .header {
+        margin-bottom: 50px;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    /* Header */
+    .header-inner {
+        flex-direction: column;
+    }
+
+    .header-brand {
+        margin-bottom: 1rem;
+    }
+
+    /* Contacts */
+    .contacts {
+        flex-direction: column;
+    }
+
+    .contacts-link {
+        margin-right: 0;
+        margin-bottom: .5rem;
+    }
+
+    .contacts-link:last-child {
+        margin-bottom: 0;
+    }
+
+    .contacts-link:last-child:after {
+        display: none;
+    }
+}
